@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ROUTES } from "./constants/routes";
 import Users from "./components/Users/Users";
@@ -8,7 +8,7 @@ import Albums from "./components/Albums/Albums";
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: ROUTES.ROOT,
     element: <Users />,

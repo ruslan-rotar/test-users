@@ -23,7 +23,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
-      publicPath: "/",
     }),
   ],
   devServer: {
